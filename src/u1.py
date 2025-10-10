@@ -56,7 +56,7 @@ def aufgabe2() -> None:
     Returns:
         None
     """
-    file_path = Path(__file__).parent / "data" / "house_data.csv"
+    file_path = Path.cwd() / "src" / "data" / "house_data.csv"
     if not file_path.exists():
         print(f"File not found: {file_path}")
         return
@@ -91,11 +91,11 @@ def aufgabe3() -> None:
     Returns:
         None
     """ 
-    file_path = Path(__file__).parent / "data" / "house_data.csv"
+    file_path = Path.cwd() / "src" / "data" / "house_data.csv"
     if not file_path.exists():
         print(f"File not found: {file_path}")
         return
-    plt_path = Path(__file__).parent / "plt" / "house_data_heatmap.png"
+    plt_path = Path.cwd() / "src" / "plt" / "house_data_heatmap.png"
     if not plt_path.parent.exists():
         plt_path.parent.mkdir(parents=True, exist_ok=True)
     data = pd.read_csv(file_path)
@@ -121,7 +121,7 @@ def aufgabe4() -> pd.DataFrame:
     Returns:
         None
     """
-    file_path = Path(__file__).parent / "data" / "house_data.csv"
+    file_path = Path.cwd() / "src" / "data" / "house_data.csv"
     if not file_path.exists():
         print(f"File not found: {file_path}")
         return
@@ -144,7 +144,7 @@ def aufgabe5() -> None:
         None
     """
 
-    file_path = Path(__file__).parent / "data" / "house_data.csv"
+    file_path = Path.cwd() / "src" / "data" / "house_data.csv"
     if not file_path.exists():
         print(f"File not found: {file_path}")
         return
